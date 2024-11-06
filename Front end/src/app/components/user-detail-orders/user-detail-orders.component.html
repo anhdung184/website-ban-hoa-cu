@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="container">
+    <h1>Chi tiết đơn hàng </h1>
+    
+    <div class="row">
+      <div class="col-md-14">
+        <h3>Thông tin đơn hàng</h3>
+        <div class="row" >
+          <div class="col-md-5">
+  
+        <p><strong>Order ID:</strong> {{ orderResponse.id }}</p>
+        <p><strong>User ID:</strong> {{ orderResponse.user_id }}</p>
+        <p><strong>Full Name:</strong> {{ orderResponse.fullname }}</p>
+        <p><strong>Phone Number:</strong> {{ orderResponse.phone_number }}</p>
+          </div>
+  
+          <div class="col-md-5">
+        <p><strong>Email:</strong> {{ orderResponse.email }}</p>
+        <p><strong>Address:</strong> {{ orderResponse.address }}</p>
+        <p><strong>Note:</strong> {{ orderResponse.note }}</p>
+        <p><strong>Order Date:</strong> {{ orderResponse.order_date | date }}</p>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="statusLabel"><strong>Status:  </strong></label>
+          <ng-container *ngIf="orderResponse.status === 'đang chờ xử lý'; else statusDisplay">
+              <select class="form-control" id="statusSelect" [(ngModel)]="orderResponse.status">
+                  <option value="đang chờ xử lý">Đang chờ xử lý</option>
+                  <option value="hủy">Hủy</option>
+              </select>
+          </ng-container>
+          <ng-template #statusDisplay>
+              <span class="status-display">{{ orderResponse.status }}</span> <!-- Hiển thị trạng thái hiện tại bên phải -->
+          </ng-template>
+      </div>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <!-- <th>Total</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        @for(order_detail of orderResponse.order_details; 
+          track order_detail.product.name) {
+            <tr>
+              <td>{{ order_detail.product.name }}</td>
+              <td>
+                <p>{{order_detail.product.price}}</p>          
+              <td>
+                <p>{{order_detail.number_of_products}}</p>          
+              </td>
+              <!-- <td>{{ order_detail.total_money }}</td> -->
+            </tr>
+        }      
+      </tbody>
+    </table>  
+    <button class="btn btn-primary col-md-2" 
+      (click)="saveOrder()">Save</button>
+  </div>
+  <app-footer></app-footer>

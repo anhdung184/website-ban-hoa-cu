@@ -1,0 +1,61 @@
+body {
+    background-color: #2c2c54; /* Màu nền tối hơn */
+    color: #ffffff; /* Màu chữ sáng */
+}
+
+h1, h2, h3 {
+    color: #ffcc00; /* Màu vàng cho tiêu đề */
+}
+
+table {
+    width: 100%;
+    background-color: #ffffff; /* Màu nền cho bảng */
+    border-collapse: collapse;
+    color: #333; /* Màu chữ trong bảng */
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ccc; /* Đường viền nhẹ cho bảng */
+}
+
+th {
+    background-color: #f8f9fa; /* Màu nền cho tiêu đề bảng */
+    color: #333; /* Màu chữ cho tiêu đề */
+}
+
+button {
+    background-color: #007bff; /* Màu xanh cho nút */
+    color: white; /* Màu chữ trên nút */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu khi hover */
+}
+.col-md-5 {
+    color: #ffffff; /* Màu chữ trắng */
+}
+.form-group {
+    color: #ffffff; /* Màu chữ trắng */
+}
+
+.form-group label {
+    color: #ffffff; /* Màu chữ vàng cho label */
+}
+
+.form-group p {
+    color: #ffffff; /* Màu chữ trắng cho đoạn văn bản hiển thị trạng thái */
+}
+.form-group {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.status-display {
+    margin-left: 10px; /* Khoảng cách giữa label và trạng thái */
+    color: #ffffff; /* Màu chữ trắng cho trạng thái */
+}

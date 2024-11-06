@@ -1,0 +1,50 @@
+body {
+    background-color: #2c3e50; /* Màu nền tối */
+    color: #ecf0f1; /* Màu chữ sáng */
+}
+
+h1 {
+    color: #ecf0f1; /* Màu tiêu đề */
+}
+
+.table {
+    background-color: #34495e; /* Màu nền bảng */
+    color: #ecf0f1; /* Màu chữ trong bảng */
+}
+
+.table th {
+    background-color: #1abc9c; /* Màu nền tiêu đề bảng */
+    color: #2c3e50; /* Màu chữ tiêu đề bảng */
+}
+
+.table td {
+    background-color: #34495e; /* Màu nền ô trong bảng */
+    color: #ecf0f1; /* Màu chữ trong ô */
+    border-top: 1px solid #ecf0f1; /* Đường viền giữa các hàng */
+}
+
+.btn-primary {
+    background-color: #3498db; /* Màu nút chính */
+    border-color: #2980b9; /* Đường viền nút chính */
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Màu nút xóa */
+    border-color: #c0392b; /* Đường viền nút xóa */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #2980b9; /* Màu cho trang hiện tại */
+    color: white; /* Màu chữ cho trang hiện tại */
+}
+
+.pagination .page-link {
+    background-color: #34495e; /* Màu nền cho các ô trang */
+    color: #ecf0f1; /* Màu chữ cho các ô trang */
+    border: 1px solid #ecf0f1; /* Đường viền cho các ô trang */
+}
+
+.pagination .page-link:hover {
+    background-color: #1abc9c; /* Màu nền khi hover */
+    color: #2c3e50; /* Màu chữ khi hover */
+}
